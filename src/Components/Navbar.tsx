@@ -7,11 +7,7 @@ import {
   IconButton,
   Button,
   Stack,
-  Collapse,
   Icon,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
@@ -28,7 +24,7 @@ export default function Navbar() {
   return (
     <Box>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={useColorModeValue('white', 'blue.600')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
         py={{ base: 2 }}
@@ -66,7 +62,17 @@ export default function Navbar() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button as={'a'} fontSize={'sm'} bg={'black'} color={'white'} fontWeight={600} _hover={{ bg: 'gray' }} variant={'link'} href={'#'} display={{ base: 'none', md: 'inline-flex' }}>
+           <Button
+            as={'a'}
+            display={{ base: 'none', md: 'inline-flex' }}
+            fontSize={'sm'}
+            fontWeight={600}
+            color={'white'}
+            bg={'black'}
+            href={'#'}
+            _hover={{
+              bg: 'gray',
+            }}>
             Sign In
           </Button>
           <Button
